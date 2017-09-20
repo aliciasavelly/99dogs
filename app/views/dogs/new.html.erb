@@ -1,0 +1,3 @@
+<h2>Add a New Dog</h2>
+<% @dog = Dog.new %>
+<%= render 'form', action: :new, dog: @dog  %>

@@ -1,6 +1,7 @@
 class DogsController < ApplicationController
   def new
-
+    @dog = Dog.new
+    render :new
   end
 
   def create
