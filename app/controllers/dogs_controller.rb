@@ -8,11 +8,18 @@ class DogsController < ApplicationController
   end
 
   def index
-
+    @dogs = Dog.all
+    render :index
   end
 
   def show
+    @dog = Dog.find(params[:id])
 
+    if @dog
+      render :show
+    else
+      redirect_to dogs_url
+    end
   end
 
   def edit

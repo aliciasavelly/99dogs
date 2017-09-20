@@ -10,7 +10,7 @@ class Dog < ApplicationRecord
     years = diff / 365
 
     if years != 0
-      return age < 2 ? "#{age} year" : "#{age} years"
+      return years < 2 ? "#{years} year" : "#{years} years"
     else
       months = diff / 30
     end

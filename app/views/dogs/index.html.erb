@@ -11,11 +11,11 @@
 
     <h2>ALL OF THE DOGS EVER</h2>
     <ul>
-      <% @dogs.each do |dog| %>
-        <li>
-          <%= link_to "Rent #{dog.name}", dog %>
-        </li>
-      <% end %>
+        <% @dogs.each do |dog| %>
+          <li>
+            <%= link_to "Rent #{dog.name}", dog %>
+          </li>
+        <% end %>
     </ul>
   </body>
 </html>
