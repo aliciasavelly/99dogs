@@ -5,10 +5,10 @@
   <input type="hidden" name="_method" value="method">
 
   <label for="dog_name">Name: </label>
-  <input type="text" name="dog[name]" value="<%= action == :edit ? dog.name : "" %>">
+  <input type="text" name="dog[name]" value="<%= method == :patch ? dog.name : "" %>">
 
   <label for="dog_birth_date">Birth Date: </label>
-  <input type="date" name="dog[birth_date]" value="<%= action == :edit ? dog.birth_date : "" %>">
+  <input type="date" name="dog[birth_date]" value="<%= method == :patch ? dog.birth_date : "" %>">
 
   <label for="color">Color: </label>
   <select class="" name="dog[color]">
@@ -25,10 +25,10 @@
   <label for="dog_sex_male">Male</label>
 
   <label for="dog_breed">Breed: </label>
-  <input type="text" name="dog[breed]" value="<%= action == :edit ? dog.breed : "" %>">
+  <input type="text" name="dog[breed]" value="<%= method == :patch ? dog.breed : "" %>">
 
   <label for="dog_description">Description: </label>
-  <textarea name="dog[description]" rows="5" cols="40"><%= action == :edit ? dog.description : "" %></textarea>
+  <textarea name="dog[description]" rows="5" cols="40"><%= method == :patch ? dog.description : "" %></textarea>
 
-  <input type="submit" name="" value="<%= action == :edit ? "Edit" : "Create" %> dog!">
+  <input type="submit" name="" value="<%= method == :patch ? "Edit" : "Create" %> dog!">
 </form>
